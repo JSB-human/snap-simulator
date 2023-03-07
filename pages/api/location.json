@@ -1,0 +1,386 @@
+[
+    {
+     "name": "TVA(TVA)",
+     "description": "4번째 턴이 끝날 때 게임을 종료합니다."
+    },
+    {
+     "name": "감마 실험실(Gamma Lab)",
+     "description": "3번째 턴이 끝나면 이 구역의 모든 카드를 헐크로 바꿉니다."
+    },
+    {
+     "name": "그랜드 센트럴 역(Grand Central)",
+     "description": "5번째 턴이 끝나면 각 플레이어의 손에 있는 카드 한 장을 이 구역에 냅니다."
+    },
+    {
+     "name": "금고(The Vault)",
+     "description": "6번째 턴에는 이 구역에 카드를 낼 수 없습니다."
+    },
+    {
+     "name": "네거티브 존(Negative Zone)",
+     "description": "이 구역에 있는 모든 카드에 -3 파워를 부여합니다."
+    },
+    {
+     "name": "네크로샤(Necrosha)",
+     "description": "이 구역에 있는 모든 카드에 -2 파워를 부여합니다."
+    },
+    {
+     "name": "넥서스(The Nexus)",
+     "description": "이 구역의 파워가 다른 구역에도 부여됩니다."
+    },
+    {
+     "name": "노웨어(Knowhere)",
+     "description": "이 구역에서는 출현 효과가 발생하지 않습니다."
+    },
+    {
+     "name": "뉴욕(New York)",
+     "description": "6째 턴에 이 구역으로 카드를 옮길 수 있습니다."
+    },
+    {
+     "name": "니다벨리르(Nidavellir)",
+     "description": "이 구역에 있는 모든 카드에 +5 파워를 부여합니다."
+    },
+    {
+     "name": "다크 디멘션(Dark Dimension)",
+     "description": "이 구역에 있는 카드는 게임이 끝날 때까지 공개되지 않습니다."
+    },
+    {
+     "name": "더 피크(The Peak)",
+     "description": "손에 있는 카드의 파워와 비용이 뒤바뀝니다."
+    },
+    {
+     "name": "데스의 영역(Death's Domain)",
+     "description": "이 구역에 카드를 내면 해당 카드를 파괴합니다."
+    },
+    {
+     "name": "데인저 룸(Danger Room)",
+     "description": "이 구역에 낸 카드는 25% 확률로 파괴됩니다."
+    },
+    {
+     "name": "데일리 뷰글(Daily Bugle)",
+     "description": "상대 손에 있는 카드 중 하나를 복사합니다."
+    },
+    {
+     "name": "드림 디멘션(Dream Dimension)",
+     "description": "5번째 턴에 카드 비용이 1 증가합니다."
+    },
+    {
+     "name": "디스트릭트 X(District X)",
+     "description": "각 플레이어의 덱에서 카드 10장을 무작위로 교체합니다."
+    },
+    {
+     "name": "라멘티스-1(Lamentis-1)",
+     "description": "카드를 3장 뽑습니다. 두 플레이어의 덱을 파괴합니다."
+    },
+    {
+     "name": "래프트(The Raft)",
+     "description": "이 구역을 먼저 채우면 비용이 6인 카드가 탈출합니다. 그 카드의 비용은 0(이)가 됩니다."
+    },
+    {
+     "name": "레무리아(Lemuria)",
+     "description": "이 턴에는 카드가 공개되지 않습니다."
+    },
+    {
+     "name": "레추길라(Lechuguilla)",
+     "description": "이 구역에 카드를 내면, 덱에 바위를 3장 섞어 넣습니다."
+    },
+    {
+     "name": "로스 디아블로스 기지(Los Diablos Base)",
+     "description": "3번째 턴이 끝난 뒤 무작위 구역을 파괴시킵니다."
+    },
+    {
+     "name": "루크의 술집(Luke's Bar)",
+     "description": "이 구역에 카드를 내면 손으로 되돌아갑니다."
+    },
+    {
+     "name": "림보(Limbo)",
+     "description": "이 게임에는 7번째 턴이 있습니다."
+    },
+    {
+     "name": "마인드스케이프(Mindscape)",
+     "description": "6번째 턴 시작 시 서로 손에 든 카드를 바꿉니다."
+    },
+    {
+     "name": "머더월드(Murderworld)",
+     "description": "3번째 턴이 끝나면 이 구역에 있는 모든 카드를 파괴합니다."
+    },
+    {
+     "name": "머신월드(Machineworld)",
+     "description": "이 구역에 카드를 내면, 해당 카드의 사본을 상대방의 손에 한 장 추가합니다."
+    },
+    {
+     "name": "모조월드(Mojoworld)",
+     "description": "이 구역에서 카드를 더 많이 가지고 있는 플레이어가 +100 파워를 얻습니다."
+    },
+    {
+     "name": "몬스터 메트로폴리스(Monster Metropolis)",
+     "description": "이 구역에서 파워가 가장 높은 카드에게 +3 파워를 부여합니다."
+    },
+    {
+     "name": "몬스터 아일랜드(Monster Island)",
+     "description": "이 구역에 파워가 9인 몬스터를 각 플레이어에게 추가합니다."
+    },
+    {
+     "name": "뮤어 아일랜드(Muir Island)",
+     "description": "턴이 끝날 때마다 이 구역의 모든 카드에게 +1 파워를 부여합니다."
+    },
+    {
+     "name": "미러 디멘션(Mirror Dimension)",
+     "description": "4번째 턴에 다른 구역 중 하나로 바뀝니다."
+    },
+    {
+     "name": "바 시니스터(Bar Sinister)",
+     "description": "이 구역에 카드를 내면 이 구역을 해당 카드의 사본으로 채웁니다."
+    },
+    {
+     "name": "백스터 빌딩(Baxter Building)",
+     "description": "이 구역에서 이기고 있는 플레이어의 모든 영역이 +3 파워를 얻습니다."
+    },
+    {
+     "name": "보로미르(Vormir)",
+     "description": "이 구역에 처음으로 낸 카드가 파괴됩니다."
+    },
+    {
+     "name": "복제소(Cloning Vats)",
+     "description": "이 구역에 카드를 내면, 해당 카드의 복사본이 손에 한 장 추가됩니다."
+    },
+    {
+     "name": "비브라늄 광산(Vibranium Mines)",
+     "description": "이 구역에 카드를 내면, 덱에 비브라늄을(를) 3장 섞어 넣습니다."
+    },
+    {
+     "name": "비프로스트(The Bifrost)",
+     "description": "4번째 턴이 끝난 뒤 모든 카드를 오른쪽으로 한 구역 옮깁니다."
+    },
+    {
+     "name": "빅 하우스(The Big House)",
+     "description": "비용이 4, 5, 6인 카드는 이 구역에 낼 수 없습니다."
+    },
+    {
+     "name": "사카아르(Sakaar)",
+     "description": "각 플레이어의 손에서 카드를 한 장씩 뽑아 이 구역에 놓습니다."
+    },
+    {
+     "name": "새비지 랜드(Savage Land)",
+     "description": "이 구역의 양측에 랩터를 둘 추가합니다."
+    },
+    {
+     "name": "생텀 생토럼(Sanctum Sanctorum)",
+     "description": "이 구역에 카드를 낼 수 없습니다."
+    },
+    {
+     "name": "섀도우랜드(Shadowland)",
+     "description": "이 구역 양측에 -2 파워의 닌자를 추가합니다."
+    },
+    {
+     "name": "서브테라니아(Subterranea)",
+     "description": "각 덱에 바위를 5장 섞어 넣습니다."
+    },
+    {
+     "name": "센트럴 파크(Central Park)",
+     "description": "모든 영역에 스쿼럴을 추가합니다."
+    },
+    {
+     "name": "소코비아(Sokovia)",
+     "description": "각 플레이어의 손에서 카드를 한 장 버립니다."
+    },
+    {
+     "name": "수몰(Flooding)",
+     "description": "이번 턴은 이 구역에 카드를 낼 수 있는 마지막 턴입니다."
+    },
+    {
+     "name": "수몰지(Flooded)",
+     "description": "이 구역에 카드를 낼 수 없습니다."
+    },
+    {
+     "name": "슈리의 연구소(Shuri's Lab)",
+     "description": "이 구역에 카드를 내면 파워가 두 배로 증가합니다."
+    },
+    {
+     "name": "슈퍼플로우(The Superflow)",
+     "description": "이 구역에 카드가 없다면 매 턴마다 에너지가 1 증가합니다."
+    },
+    {
+     "name": "스타라이트 시타델(Starlight Citadel)",
+     "description": "4번째 턴이 끝나면 모든 구역의 위치를 교체합니다."
+    },
+    {
+     "name": "스타크 타워(Stark Tower)",
+     "description": "5번째 턴이 끝나면 이 구역의 모든 카드에 +2 파워를 부여합니다."
+    },
+    {
+     "name": "스트레인지 아카데미(Strange Academy)",
+     "description": "5턴 후, 이곳에 모든 카드를 다른 무작위 위치로 옮깁니다."
+    },
+    {
+     "name": "시니스터 런던(Sinister London)",
+     "description": "이 구역에 카드를 내면, 해당 카드의 복사본을 다른 구역에 추가합니다."
+    },
+    {
+     "name": "신 로마(Nova Roma)",
+     "description": "카드를 한 장 뽑습니다."
+    },
+    {
+     "name": "아스가르드(Asgard)",
+     "description": "4번째 턴이 끝나면 이 구역에서 이긴 플레이어가 카드를 2장 뽑습니다."
+    },
+    {
+     "name": "아이스 박스(The Ice Box)",
+     "description": "각 플레이어의 손에 있는 카드의 비용이 1 증가합니다."
+    },
+    {
+     "name": "아틀란티스(Atlantis)",
+     "description": "이 구역에 카드가 하나만 있다면 해당 카드에 +5 파워를 부여합니다."
+    },
+    {
+     "name": "아틸리안(Attilan)",
+     "description": "3턴 후에 손에 있는 카드를 덱에 섞어 넣습니다. 카드를 세 장 뽑습니다."
+    },
+    {
+     "name": "어벤저스 본부(Avengers Compound)",
+     "description": "5번째 턴에 모든 카드를 반드시 이 구역에 내야 합니다."
+    },
+    {
+     "name": "에고(Ego)",
+     "description": "에고가 플레이어 대신 카드를 냅니다."
+    },
+    {
+     "name": "엑스 맨션(X-Mansion)",
+     "description": "3번째 턴이 끝나면 이 구역에 무작위 카드를 각 플레이어에게 추가합니다."
+    },
+    {
+     "name": "엘리시움(Elysium)",
+     "description": "카드 비용이 1 줄어듭니다."
+    },
+    {
+     "name": "오스코프 타워(Oscorp Tower)",
+     "description": "3번째 턴이 끝나면 이 구역의 모든 카드가 편을 바꿉니다."
+    },
+    {
+     "name": "온슬로트의 요새(Onslaught's Citadel)",
+     "description": "이 구역에서는 지속 효과가 두 배가 됩니다."
+    },
+    {
+     "name": "올림피아(Olympia)",
+     "description": "카드를 두 장 뽑습니다."
+    },
+    {
+     "name": "와칸다(Wakanda)",
+     "description": "이 구역의 카드는 파괴될 수 없습니다."
+    },
+    {
+     "name": "와칸다 대사관(Wakandan Embassy)",
+     "description": "플레이어의 손에 있는 모든 카드에 +2 파워를 부여합니다."
+    },
+    {
+     "name": "왕좌의 방(Throne Room)",
+     "description": "여기에서 가장 높은 파워를 가진 카드는 원래 파워의 두 배가 됩니다."
+    },
+    {
+     "name": "요툰헤임(Jotunheim)",
+     "description": "턴이 끝날 때마다 이 구역의 모든 카드에 -1 파워를 부여합니다."
+    },
+    {
+     "name": "우주 왕좌(The Space Throne)",
+     "description": "이 구역에서 각 플레이어는 한 장의 카드만 놓을 수 있습니다."
+    },
+    {
+     "name": "워리어 폴스(Warrior Falls)",
+     "description": "턴이 종료될 때마다 이곳의 카드가 전투를 벌입니다! 가장 약한 카드를 파괴합니다."
+    },
+    {
+     "name": "워싱턴 D.C.(Washington D.C.)",
+     "description": "지속: 이 구역의 능력이 없는 모든 카드에 +3 파워를 부여합니다."
+    },
+    {
+     "name": "월드쉽(Worldship)",
+     "description": "다른 구역을 파괴합니다."
+    },
+    {
+     "name": "웨스트뷰(Westview)",
+     "description": "4번째 턴에 새로운 구역으로 바뀝니다."
+    },
+    {
+     "name": "위어드월드(Weirdworld)",
+     "description": "두 플레이어가 상대방의 덱에서 카드를 뽑습니다."
+    },
+    {
+     "name": "이름 없는 술집(Bar With No Name)",
+     "description": "이 구역에서 파워가 가장 적은 플레이어가 승리합니다."
+    },
+    {
+     "name": "잔다르(Xandar)",
+     "description": "이 구역에 있는 모든 카드에 +1 파워를 부여합니다."
+    },
+    {
+     "name": "축소된 연구소(Miniaturized Lab)",
+     "description": "3, 4, 5번째 턴에는 이 구역에 카드를 추가할 수 없습니다."
+    },
+    {
+     "name": "침묵의 섬(Isle of Silence)",
+     "description": "이 구역에 지속 카드를 내면 능력이 제거됩니다."
+    },
+    {
+     "name": "카마르 타지(Kamar-Taj)",
+     "description": "이 구역에서는 출현 효과가 두 번 발생합니다."
+    },
+    {
+     "name": "쿤룬(K'un-Lun)",
+     "description": "임의의 카드가 이 구역으로 이동해 오면 +2 파워를 부여합니다."
+    },
+    {
+     "name": "크림슨 코스모스(Crimson Cosmos)",
+     "description": "비용이 1, 2, 3인 카드는 이 구역에 낼 수 없습니다."
+    },
+    {
+     "name": "클린타르(Klyntar)",
+     "description": "4턴에, 이 구역에 있는 내 카드를 심비오트와(과) 합체합니다."
+    },
+    {
+     "name": "킬른(Kyln)",
+     "description": "4번째 턴이 끝난 뒤 이 구역에 카드를 낼 수 없습니다."
+    },
+    {
+     "name": "타이탄(Titan)",
+     "description": "비용이 6인 카드의 비용이 1 줄어듭니다."
+    },
+    {
+     "name": "트리스켈리온(The Triskelion)",
+     "description": "각 플레이어의 손을 무작위 카드로 채웁니다."
+    },
+    {
+     "name": "팅커러의 작업실(Tinkerer's Workshop)",
+     "description": "이번 턴에 에너지를 1 더합니다."
+    },
+    {
+     "name": "폐허(Ruins)",
+     "description": ""
+    },
+    {
+     "name": "프로젝트 페가수스(Project Pegasus)",
+     "description": "이번 턴에 에너지를 5 더합니다."
+    },
+    {
+     "name": "피스크 타워(Fisk Tower)",
+     "description": "카드가 이 구역으로 이동하면 파괴합니다."
+    },
+    {
+     "name": "하수도(Sewer System)",
+     "description": "이 구역에 있는 카드에 -1 파워를 부여합니다."
+    },
+    {
+     "name": "할라(Hala)",
+     "description": "4번째 턴이 끝나면 이 구역에서 패배한 플레이어가 플레이한 모든 카드를 파괴합니다."
+    },
+    {
+     "name": "허브(The Hub)",
+     "description": "각 플레이어의 손에 무작위 카드 한 장을 추가합니다."
+    },
+    {
+     "name": "헬스 키친(Hell's Kitchen)",
+     "description": "덱에서 비용이 1인 카드를 한 장 뽑습니다."
+    },
+    {
+     "name": "헬파이어 클럽(Hellfire Club)",
+     "description": "비용이 1인 카드는 이 구역에 낼 수 없습니다."
+    }
+   ]

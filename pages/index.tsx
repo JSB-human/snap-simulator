@@ -23,6 +23,17 @@ interface cardZoneProps {
   des : string;
 }
 
+interface CardProps {
+  val: {
+    en: string;
+    power: string;
+    name: string;
+    base: string;
+    cost: string;
+  } | any,
+  index: number;
+}
+
 export default function Home() {
 
   const [cardPower, setCardPower] = useState<number[]>(
@@ -150,16 +161,63 @@ export default function Home() {
     )
   }
 
-  const cardList = CardJson.sort((a,b) => 
-    parseInt(a.cost) - parseInt(b.cost)
-  ).map((val, idx) => {
+  // const CardList = CardJson.sort((a,b) => 
+  //   parseInt(a.cost) - parseInt(b.cost)
+  // ).map((val, idx) => {
+  //   let cardName = val.en.replace(/ /g, "-");
+  //   cardName = cardName.replace(/'/g, "");
+  //   let cardPower = Number(val.power);
+  //   let cardKr = val.name;
+  //   let cardDetail = val.base;
+    
+  //   const [{isDragging}, drag] = useDrag(() => ({
+  //     type : 'box',
+  //     item : { cardName : cardName, power : cardPower, kr : val.name, description : val.base },
+      
+  //     end : (item, monitor) => {
+  //       const dropResult = monitor.getDropResult();
+  //       if(item && dropResult) {
+  //         setNowDrop({cardName : cardName, power : cardPower});
+  //       }
+  //     },
+  //     collect : (monitor) => ({
+  //       isDragging : monitor.isDragging(),
+  //       handlerId : monitor.getHandlerId(),
+  //     }),
+  //   }))
+
+  //   if(isDragging){
+  //     window.scrollTo(0,55);
+  //   }
+
+  //   return  (
+  //     <div key={idx}>
+  //       <Tooltip title={
+  //         <div>
+  //           <p className="text-yellow-400">{cardKr}</p>
+  //           <p>{cardDetail}</p>
+  //         </div>
+  //       } arrow placement="top" disableInteractive>
+  //         <Image alt="카드" 
+  //           src={`/cards/${cardName}.png`}
+  //           width={100}
+  //           height={100}
+  //           ref={drag} data-testid={'box'}
+  //           placeholder={"blur"}
+  //           blurDataURL={"/white.png"}
+  //         />
+  //       </Tooltip>
+  //     </div>
+  //   )
+  // })
+  const CardDrop = ({ val, index } : CardProps) => {
     let cardName = val.en.replace(/ /g, "-");
     cardName = cardName.replace(/'/g, "");
     let cardPower = Number(val.power);
     let cardKr = val.name;
     let cardDetail = val.base;
-    
-    const [{isDragging}, drag] = useDrag({
+  
+    const [{isDragging}, drag] = useDrag(() => ({
       type : 'box',
       item : { cardName : cardName, power : cardPower, kr : val.name, description : val.base },
       
@@ -173,15 +231,14 @@ export default function Home() {
         isDragging : monitor.isDragging(),
         handlerId : monitor.getHandlerId(),
       }),
-    },[cardName, cardPower]
-    );
-
+    }));
+  
     if(isDragging){
       window.scrollTo(0,55);
     }
-
-    return  (
-      <div key={idx}>
+  
+    return (
+      <div key={index}>
         <Tooltip title={
           <div>
             <p className="text-yellow-400">{cardKr}</p>
@@ -198,8 +255,16 @@ export default function Home() {
           />
         </Tooltip>
       </div>
-    )
-  })
+    );
+  };
+
+  const CardList = CardJson.sort((a,b) => 
+    parseInt(a.cost) - parseInt(b.cost)
+  ).map((val, index) => (
+    <CardDrop val={val} index={index} key={index}/>
+  ));
+
+
 
   const handleCardDrop = useCallback(
     (zoneIndex: number, card: any, index : number) => {
@@ -255,7 +320,7 @@ export default function Home() {
           return;
       }
     },
-    [nowDrop, cardZones, cardZones2, cardZones3, cardZones4, cardZones5, cardZones6]
+    [cardZones, cardZones2, cardZones3, cardZones4, cardZones5, cardZones6]
   );
 
 
@@ -330,16 +395,16 @@ export default function Home() {
     )
   }
 
-  const CardZone : FC<cardZoneProps> = memo(function cardZone({ cardName, zoneNo, power, dropCard, kr, des }) {
+  const CardZone : FC<cardZoneProps> = memo(function CardZone({ cardName, zoneNo, power, dropCard, kr, des }) {
   
-    const [{canDrop, isOver}, drop] = useDrop({
+    const [{canDrop, isOver}, drop] = useDrop(() => ({
       accept : 'box',
       drop : dropCard,
       collect:  (monitor) => ({ 
         isOver: monitor.isOver(),
         canDrop : monitor.canDrop(),
       }),
-    })
+    }))
     
 
     const isActive = canDrop && isOver;
@@ -633,7 +698,7 @@ export default function Home() {
 
         <div className="border-2 m-4 p-2">
           <div className="grid grid-cols-3 lg:grid-cols-12 md:grid-cols-6 sm:grid-cols-4 overflow-scroll h-[250px]">
-            {cardList}
+            {CardList}
           </div>
         </div>
         카드를 드래그하면 스크롤이 올라갑니다.

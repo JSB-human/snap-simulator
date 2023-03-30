@@ -4,21 +4,23 @@ import Image from "next/image";
 
 interface cardZoneProps {
     cardName : string, 
-    zoneNo : number
+    zoneNo : number,
+    power : number,
+    dropCard : any
   }
   
 
-export const CardZone : FC<cardZoneProps> = memo(function cardZone({ cardName, zoneNo }) {
-    const [{canDrop, isOver}, drop] = useDrop(() => ({
+export const CardZone : FC<cardZoneProps> = memo(function cardZone({ cardName, zoneNo, power, dropCard }) {
+  
+    const [{canDrop, isOver}, drop] = useDrop({
       accept : 'box',
-      drop : () => ({name : cardName, zone : zoneNo}),
-      collect:  (monitor) => ({
+      drop : dropCard,
+      collect:  (monitor) => ({ 
         isOver: monitor.isOver(),
         canDrop : monitor.canDrop(),
       }),
-    }),
-    [cardName, zoneNo]
-    )
+    })
+    
 
     const isActive = canDrop && isOver;
     let bgColor = 'bg-gray-50';
@@ -35,12 +37,20 @@ export const CardZone : FC<cardZoneProps> = memo(function cardZone({ cardName, z
         data-testid='bin'
       ></div>
       :
-      <Image alt="카드"
-        src={`/cards/${cardName}.png`}
-        width={100}
-        height={100}
-        ref={drop}
-        className={`${bgColor}`}
-      ></Image>
+      <div>
+        <Image alt="카드"
+          src={`/cards/${cardName}.png`}
+          width={100}
+          height={100}
+          ref={drop}
+          className={`${bgColor}`}
+          placeholder={"blur"}
+          blurDataURL={"/white.png"}
+        ></Image>
+        <div>
+          {power}
+        </div>
+      </div>
+    
     )
   })

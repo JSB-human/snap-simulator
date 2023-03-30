@@ -1,4 +1,5 @@
 import Image from "next/dist/client/image";
+import Footer from "../../components/footer";
 import Header from "../../components/header";
 import LocationJson from "../api/location.json";
 
@@ -14,11 +15,13 @@ const Location = () => {
 
 
         return (
-            <div className="flex flex-col justify-center items-center border-2 m-2 bg-white" key={index}>
+            <div className="flex flex-col justify-center items-center border-4 rounded-lg border-gray-300 m-2 bg-white" key={index}>
                 <Image alt="구역"
                     src={`/locations/${locationImg}.png`}  
                     width={200}
                     height={200}
+                    placeholder={"blur"}
+                    blurDataURL={"/white.png"}
                 />
                 <div className="p-2">
                     <div className="font-bold">
@@ -42,7 +45,7 @@ const Location = () => {
             <div className="grid grid-cols-4 pt-2 pb-2">
                 {locationDiv}
             </div>
-            
+            <Footer></Footer>
         </div>
     )
 }

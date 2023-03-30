@@ -2,6 +2,7 @@ import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import Footer from "../../components/footer";
 import Header from "../../components/header";
 import CardJson from "../api/cards.json";
 
@@ -29,20 +30,25 @@ const Card = () => {
     const [sort, setSort] = useState(0); // 분류
 
     const [costNum, setCostNum] = useState('');
+
+
+  
     
     const cardSort = CardJson.sort((a,b) => 
         sort === 0 ? 
         cost != 0 ? parseInt(a.cost) - parseInt(b.cost) : parseInt(b.cost) - parseInt(a.cost)
         :
         power != 0 ? parseInt(a.power) - parseInt(b.power) : parseInt(b.power) - parseInt(a.power)
-        
 
         ).filter(val => {
             let card : any = val.name.includes(search);
             
             return card;
         }).filter(val => {
-            let card = val.sort?.includes(ability) || val.sort2?.includes(ability) || val.sort3?.includes(ability);
+            let card;
+
+            card = val.sort?.includes(ability) || val.sort2?.includes(ability) || val.sort3?.includes(ability);
+
             return card;
         }).filter(val => {
             let card;
@@ -56,13 +62,16 @@ const Card = () => {
             return card;
         }).map((val, index) => {
         let cardName = val.en.replace(/ /g, "-");
+        cardName = cardName.replace(/'/g, "");
 
         return (
-            <div key={index} className="flex flex-col justify-center items-center border-2 m-2 bg-white">
+            <div key={index} className="flex flex-col justify-center items-center border-4 rounded-lg border-gray-300 m-2 bg-white">
                 <Image alt="card" src={`/cards/${cardName}.png`}
                     className=""
                     width={200}
                     height={200}
+                    // placeholder={"blur"}
+                    // blurDataURL={"/white.png"}
                 ></Image>
                 <span className="font-bold text-lg">{val.name}</span>
                 <div className="text-sm p-2">
@@ -329,7 +338,7 @@ const Card = () => {
     }
 
     return(
-        <div className="min-h-screen h-full w-full text-center bg-white">
+        <div className="min-h-screen h-full w-full text-center bg-gray-100">
             <Header></Header>
 
             <div className="text-2xl p-4">카드</div>
@@ -368,11 +377,11 @@ const Card = () => {
                 </div>
             </div>
            
-            <div className="grid grid-cols-4 pt-2 pb-2">
+            <div className="grid grid-cols-2 xl:grid-cols-6 pt-2 pb-2">
                 {cardSort}
             </div>
 
-
+        <Footer></Footer>
 
         </div>
     )

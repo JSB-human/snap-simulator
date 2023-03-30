@@ -151,7 +151,7 @@ export default function Home() {
               
               } disableInteractive>
               <Image alt="구역"
-                src={`/locations/${locationName}.png`}
+                src={`/locations/${locationName.toLowerCase()}.png`}
                 width={150}
                 height={150}
                 placeholder={"blur"}
@@ -246,7 +246,7 @@ export default function Home() {
           </div>
         } arrow placement="top" disableInteractive>
           <Image alt="카드" 
-            src={`/cards/${cardName}.png`}
+            src={`/cards/${cardName.toLowerCase()}.png`}
             width={100}
             height={100}
             ref={drag} data-testid={'box'}
@@ -431,7 +431,7 @@ export default function Home() {
             </div>
           } disableInteractive>
             <Image alt="카드"
-              src={`/cards/${cardName}.png`}
+              src={`/cards/${cardName.toLowerCase()}.png`}
               width={100}
               height={100}
               ref={drop}

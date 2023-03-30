@@ -63,6 +63,7 @@ const Card = () => {
         }).map((val, index) => {
         let cardName = val.en.replace(/ /g, "-");
         cardName = cardName.replace(/'/g, "");
+        cardName = cardName.toLowerCase();
 
         return (
             <div key={index} className="flex flex-col justify-center items-center border-4 rounded-lg border-gray-300 m-2 bg-white">

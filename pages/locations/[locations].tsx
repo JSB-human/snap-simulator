@@ -17,7 +17,7 @@ const Location = () => {
         return (
             <div className="flex flex-col justify-center items-center border-4 rounded-lg border-gray-300 m-2 bg-white" key={index}>
                 <Image alt="구역"
-                    src={`/locations/${locationImg}.png`}  
+                    src={`/locations/${locationImg.toLowerCase()}.png`}  
                     width={200}
                     height={200}
                     placeholder={"blur"}

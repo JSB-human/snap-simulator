@@ -1,11 +1,13 @@
 import Image from "next/image";
-import { FC, memo, useCallback, useEffect, useState } from "react"
+import { FC, memo, useCallback, useEffect, useRef, useState } from "react"
 import Header from "../components/header";
 import { useDrag, useDrop } from "react-dnd";
 import CardJson from "../pages/api/cards.json";
 import LocationJson from "../pages/api/location.json";
 import { Button, FormControl, InputLabel, MenuItem, Select, SelectChangeEvent, Tooltip } from "@mui/material";
 import Footer from "../components/footer";
+import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
+import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
 
 interface cardZoneState {
   cardName : string;
@@ -86,7 +88,7 @@ export default function Home() {
 
   const [nowDrop, setNowDrop] = useState({cardName : '', power : 0});
 
-
+  const innerRef = useRef(null);
 
   const locationChange = (e : SelectChangeEvent, no : number) => {
 
@@ -117,7 +119,7 @@ export default function Home() {
 
     return (
             locationName === "" ?
-            <div className="w-[150px] h-[150px] border-2 flex items-center"> 
+            <div className="w-[130px] h-[150px] border-2 flex items-center"> 
               <FormControl fullWidth>
                 <InputLabel id="location-label">구역</InputLabel>
                 <Select
@@ -230,7 +232,7 @@ export default function Home() {
       collect : (monitor) => ({
         isDragging : monitor.isDragging(),
         handlerId : monitor.getHandlerId(),
-      }),
+      })
     }));
   
     if(isDragging){
@@ -252,6 +254,7 @@ export default function Home() {
             ref={drag} data-testid={'box'}
             placeholder={"blur"}
             blurDataURL={"/white.png"}
+            onContextMenu={() => {return false;}}
           />
         </Tooltip>
       </div>
@@ -598,6 +601,20 @@ export default function Home() {
     setLocation3("");
 
   }
+
+  const scrollUp = () => {
+    let cur : any = innerRef.current;
+    if(cur){
+      cur.scrollTop -= 100;
+    }
+  }
+
+  const scrollDown = () => {
+    let cur : any = innerRef.current;
+    if(cur){
+      cur.scrollTop += 100;
+    }
+  }
  
 
 
@@ -697,11 +714,13 @@ export default function Home() {
         </div>
 
         <div className="border-2 m-4 p-2">
-          <div className="grid grid-cols-3 lg:grid-cols-12 md:grid-cols-6 sm:grid-cols-4 overflow-scroll h-[250px]">
+          <Button className="w-full lg:hidden md:block" onClick={scrollUp}><ArrowCircleUpIcon></ArrowCircleUpIcon></Button>
+          <div ref={innerRef} className="grid grid-cols-3 lg:grid-cols-12 md:grid-cols-6 sm:grid-cols-4 overflow-y-auto h-[250px] ">
             {CardList}
           </div>
+          <Button className="w-full lg:hidden md:block" onClick={scrollDown}><ArrowCircleDownIcon ></ArrowCircleDownIcon></Button>
         </div>
-        카드를 드래그하면 스크롤이 올라갑니다.
+        <p>카드를 드래그하면 스크롤이 올라갑니다.</p>
         <Footer></Footer>
       </main>
     </div>

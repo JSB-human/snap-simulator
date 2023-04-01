@@ -39,10 +39,10 @@ const Location = () => {
 
 
     return(
-        <div className="min-h-screen h-full w-full text-center bg-white">
+        <div className="min-h-screen h-full w-full text-center bg-gray-100">
             <Header></Header>
             <div className="text-2xl p-4">구역</div>
-            <div className="grid grid-cols-4 pt-2 pb-2">
+            <div className="grid lg:grid-cols-4 pt-2 pb-2 md:grid-cols-2">
                 {locationDiv}
             </div>
             <Footer></Footer>

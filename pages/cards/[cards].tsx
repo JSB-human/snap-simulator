@@ -8,19 +8,19 @@ import CardJson from "../api/cards.json";
 
 const Card = () => {
 
-    const [cost1, setCost1] = useState<string>('');
-    const [cost2, setCost2] = useState<string>('');
-    const [cost3, setCost3] = useState<string>('');
-    const [cost4, setCost4] = useState<string>('');
-    const [cost5, setCost5] = useState<string>('');
-    const [cost6, setCost6] = useState<string>('');
+    const [cost1, setCost1] = useState<boolean>(false);
+    const [cost2, setCost2] = useState<boolean>(false);
+    const [cost3, setCost3] = useState<boolean>(false);
+    const [cost4, setCost4] = useState<boolean>(false);
+    const [cost5, setCost5] = useState<boolean>(false);
+    const [cost6, setCost6] = useState<boolean>(false);
 
-    const [abil1, setAbil1] = useState<string>('');
-    const [abil2, setAbil2] = useState<string>('');
-    const [abil3, setAbil3] = useState<string>('');
-    const [abil4, setAbil4] = useState<string>('');
-    const [abil5, setAbil5] = useState<string>('');
-    const [abil6, setAbil6] = useState<string>('');
+    const [abil1, setAbil1] = useState<boolean>(false);
+    const [abil2, setAbil2] = useState<boolean>(false);
+    const [abil3, setAbil3] = useState<boolean>(false);
+    const [abil4, setAbil4] = useState<boolean>(false);
+    const [abil5, setAbil5] = useState<boolean>(false);
+    const [abil6, setAbil6] = useState<boolean>(false);
 
     const [search, setSearch] = useState('');
     const [ability, setAbility] = useState('');
@@ -89,115 +89,116 @@ const Card = () => {
     const costBtn1 = () => {
         if(costNum === '-1'){
             setCostNum('');
-            setCost1('');
-            setCost2('');
-            setCost3('');
-            setCost4('');
-            setCost5('');
-            setCost6('');
+            setCost1(false);
+            setCost2(false);
+            setCost3(false);
+            setCost4(false);
+            setCost5(false);
+            setCost6(false);
         }else{
             setCostNum('-1');
-            setCost1('bg-green-600 text-white hover:bg-green-800');
-            setCost2('');
-            setCost3('');
-            setCost4('');
-            setCost5('');
-            setCost6('');
+            setCost1(true);
+            setCost2(false);
+            setCost3(false);
+            setCost4(false);
+            setCost5(false);
+            setCost6(false);
         }
     }
     const costBtn2 = () => {
         if(costNum === '2'){
             setCostNum('');
-            setCost1('');
-            setCost2('');
-            setCost3('');
-            setCost4('');
-            setCost5('');
-            setCost6('');
+            setCost1(false);
+            setCost2(false);
+            setCost3(false);
+            setCost4(false);
+            setCost5(false);
+            setCost6(false);
         }else{
             setCostNum('2');
-            setCost1('');
-            setCost2('bg-green-600 text-white hover:bg-green-800');
-            setCost3('');
-            setCost4('');
-            setCost5('');
-            setCost6('');
+            setCost1(false);
+            setCost2(true);
+            setCost3(false);
+            setCost4(false);
+            setCost5(false);
+            setCost6(false);
         }
     }
     const costBtn3 = () => {
         if(costNum === '3'){
             setCostNum('');
-            setCost1('');
-            setCost2('');
-            setCost3('');
-            setCost4('');
-            setCost5('');
-            setCost6('');
+            setCostNum('');
+            setCost1(false);
+            setCost2(false);
+            setCost3(false);
+            setCost4(false);
+            setCost5(false);
+            setCost6(false);
         }else{
             setCostNum('3');
-            setCost1('');
-            setCost2('');
-            setCost3('bg-green-600 text-white hover:bg-green-800');
-            setCost4('');
-            setCost5('');
-            setCost6('');
+            setCost1(false);
+            setCost2(false);
+            setCost3(true);
+            setCost4(false);
+            setCost5(false);
+            setCost6(false);
         }
     }
     const costBtn4 = () => {
         if(costNum === '4'){
             setCostNum('');
-            setCost1('');
-            setCost2('');
-            setCost3('');
-            setCost4('');
-            setCost5('');
-            setCost6('');
+            setCost1(false);
+            setCost2(false);
+            setCost3(false);
+            setCost4(false);
+            setCost5(false);
+            setCost6(false);
         }else{
             setCostNum('4');
-            setCost1('');
-            setCost2('');
-            setCost3('');
-            setCost4('bg-green-600 text-white hover:bg-green-800');
-            setCost5('');
-            setCost6('');
+            setCost1(false);
+            setCost2(false);
+            setCost3(false);
+            setCost4(true);
+            setCost5(false);
+            setCost6(false);
         }
     }
     const costBtn5 = () => {
         if(costNum === '5'){
             setCostNum('');
-            setCost1('');
-            setCost2('');
-            setCost3('');
-            setCost4('');
-            setCost5('');
-            setCost6('');
+            setCost1(false);
+            setCost2(false);
+            setCost3(false);
+            setCost4(false);
+            setCost5(false);
+            setCost6(false);
         }else{
             setCostNum('5');
-            setCost1('');
-            setCost2('');
-            setCost3('');
-            setCost4('');
-            setCost5('bg-green-600 text-white hover:bg-green-800');
-            setCost6('');
+            setCost1(false);
+            setCost2(false);
+            setCost3(false);
+            setCost4(false);
+            setCost5(true);
+            setCost6(false);
         }
     }
     const costBtn6 = () => {
         if(costNum === '6+'){
             setCostNum('');
-            setCost1('');
-            setCost2('');
-            setCost3('');
-            setCost4('');
-            setCost5('');
-            setCost6('');
+            setCost1(false);
+            setCost2(false);
+            setCost3(false);
+            setCost4(false);
+            setCost5(false);
+            setCost6(false);
         }else{
             setCostNum('6+');
-            setCost1('');
-            setCost2('');
-            setCost3('');
-            setCost4('');
-            setCost5('');
-            setCost6('bg-green-600 text-white hover:bg-green-800');
+            setCost1(false);
+            setCost2(false);
+            setCost3(false);
+            setCost4(false);
+            setCost5(false);
+            setCost6(true);
         }
     }
 
@@ -233,101 +234,102 @@ const Card = () => {
         //     abilTxt = abilTxt + txt;
         // }
         // setAbility(abilTxt);
+
         if(txt === '출현'){
-            if(abil1 === 'bg-purple-600 text-white hover:bg-purple-800'){
-                setAbil1('');
-                setAbil2('');
-                setAbil3('');
-                setAbil4('');
-                setAbil5('');
-                setAbil6('');
+            if(abil1){
+                setAbil1(false);
+                setAbil2(false);
+                setAbil3(false);
+                setAbil4(false);
+                setAbil5(false);
+                setAbil6(false);
             }else{
-                setAbil1('bg-purple-600 text-white hover:bg-purple-800');
-                setAbil2('');
-                setAbil3('');
-                setAbil4('');
-                setAbil5('');
-                setAbil6('');
+                setAbil1(true);
+                setAbil2(false);
+                setAbil3(false);
+                setAbil4(false);
+                setAbil5(false);
+                setAbil6(false);
             }
         }else if(txt === '지속'){
-            if(abil2 === 'bg-purple-600 text-white hover:bg-purple-800'){
-                setAbil1('');
-                setAbil2('');
-                setAbil3('');
-                setAbil4('');
-                setAbil5('');
-                setAbil6('');
+            if(abil2){
+                setAbil1(false);
+                setAbil2(false);
+                setAbil3(false);
+                setAbil4(false);
+                setAbil5(false);
+                setAbil6(false);
             }else{
-                setAbil1('');
-                setAbil2('bg-purple-600 text-white hover:bg-purple-800');
-                setAbil3('');
-                setAbil4('');
-                setAbil5('');
-                setAbil6('');
+                setAbil1(false);
+                setAbil2(true);
+                setAbil3(false);
+                setAbil4(false);
+                setAbil5(false);
+                setAbil6(false);
             }
         }else if(txt === '능력없음'){
-            if(abil3 === 'bg-purple-600 text-white hover:bg-purple-800'){
-                setAbil1('');
-                setAbil2('');
-                setAbil3('');
-                setAbil4('');
-                setAbil5('');
-                setAbil6('');
+            if(abil3){
+                setAbil1(false);
+                setAbil2(false);
+                setAbil3(false);
+                setAbil4(false);
+                setAbil5(false);
+                setAbil6(false);
             }else{
-                setAbil1('');
-                setAbil2('');
-                setAbil3('bg-purple-600 text-white hover:bg-purple-800');
-                setAbil4('');
-                setAbil5('');
-                setAbil6('');
+                setAbil1(false);
+                setAbil2(false);
+                setAbil3(true);
+                setAbil4(false);
+                setAbil5(false);
+                setAbil6(false);
             }
         }else if(txt === '버리기'){
-            if(abil4 === 'bg-purple-600 text-white hover:bg-purple-800'){
-                setAbil1('');
-                setAbil2('');
-                setAbil3('');
-                setAbil4('');
-                setAbil5('');
-                setAbil6('');
+            if(abil4){
+                setAbil1(false);
+                setAbil2(false);
+                setAbil3(false);
+                setAbil4(false);
+                setAbil5(false);
+                setAbil6(false);
             }else{
-                setAbil1('');
-                setAbil2('');
-                setAbil3('');
-                setAbil4('bg-purple-600 text-white hover:bg-purple-800');
-                setAbil5('');
-                setAbil6('');
+                setAbil1(false);
+                setAbil2(false);
+                setAbil3(false);
+                setAbil4(true);
+                setAbil5(false);
+                setAbil6(false);
             }
         }else if(txt === '이동'){
-            if(abil5 === 'bg-purple-600 text-white hover:bg-purple-800'){
-                setAbil1('');
-                setAbil2('');
-                setAbil3('');
-                setAbil4('');
-                setAbil5('');
-                setAbil6('');
+            if(abil5){
+                setAbil1(false);
+                setAbil2(false);
+                setAbil3(false);
+                setAbil4(false);
+                setAbil5(false);
+                setAbil6(false);
             }else{
-                setAbil1('');
-                setAbil2('');
-                setAbil3('');
-                setAbil4('');
-                setAbil5('bg-purple-600 text-white hover:bg-purple-800');
-                setAbil6('');
+                setAbil1(false);
+                setAbil2(false);
+                setAbil3(false);
+                setAbil4(false);
+                setAbil5(true);
+                setAbil6(false);
             }
         }else if(txt === '파괴'){
-            if(abil6 === 'bg-purple-600 text-white hover:bg-purple-800'){
-                setAbil1('');
-                setAbil2('');
-                setAbil3('');
-                setAbil4('');
-                setAbil5('');
-                setAbil6('');
+            if(abil6){
+                setAbil1(false);
+                setAbil2(false);
+                setAbil3(false);
+                setAbil4(false);
+                setAbil5(false);
+                setAbil6(false);
             }else{
-                setAbil1('');
-                setAbil2('');
-                setAbil3('');
-                setAbil4('');
-                setAbil5('');
-                setAbil6('bg-purple-600 text-white hover:bg-purple-800');
+                setAbil1(false);
+                setAbil2(false);
+                setAbil3(false);
+                setAbil4(false);
+                setAbil5(false);
+                setAbil6(true);
             }
         }
 
@@ -344,14 +346,14 @@ const Card = () => {
 
             <div className="text-2xl p-4">카드</div>
             <div className="grid grid-cols-2">
-                <div className="text-left">
-                    <span>비용 : </span>
-                    <Button variant="outlined" color="success" onClick={costBtn1} className={`${cost1}`}>-1</Button>
-                    <Button variant="outlined" color="success" onClick={costBtn2} className={`${cost2}`}>2</Button>
-                    <Button variant="outlined" color="success" onClick={costBtn3} className={`${cost3}`}>3</Button>
-                    <Button variant="outlined" color="success" onClick={costBtn4} className={`${cost4}`}>4</Button>
-                    <Button variant="outlined" color="success" onClick={costBtn5} className={`${cost5}`}>5</Button>
-                    <Button variant="outlined" color="success" onClick={costBtn6} className={`${cost6}`}>6+</Button>
+                <div className="text-left pl-2">
+                    <p><b>비용</b></p>
+                    <Button variant="outlined" color="success" onClick={costBtn1} className={cost1 ? 'bg-green-600 text-white hover:bg-green-800' : ''}>-1</Button>
+                    <Button variant="outlined" color="success" onClick={costBtn2} className={cost2 ? 'bg-green-600 text-white hover:bg-green-800' : ''}>2</Button>
+                    <Button variant="outlined" color="success" onClick={costBtn3} className={cost3 ? 'bg-green-600 text-white hover:bg-green-800' : ''}>3</Button>
+                    <Button variant="outlined" color="success" onClick={costBtn4} className={cost4 ? 'bg-green-600 text-white hover:bg-green-800' : ''}>4</Button>
+                    <Button variant="outlined" color="success" onClick={costBtn5} className={cost5 ? 'bg-green-600 text-white hover:bg-green-800' : ''}>5</Button>
+                    <Button variant="outlined" color="success" onClick={costBtn6} className={cost6 ? 'bg-green-600 text-white hover:bg-green-800' : ''}>6+</Button>
                 
                 </div>
                 <div className="text-right">
@@ -361,20 +363,20 @@ const Card = () => {
                 </div>
             </div>
             <div className="grid grid-cols-2">
-                <div className="text-left">
-                    <span>능력 : </span>
-                    <Button variant={'outlined'} color="secondary" onClick={() => abilBtn('출현')} className={`${abil1}`}>출현</Button>
-                    <Button variant={'outlined'} color="secondary" onClick={() => abilBtn('지속')} className={`${abil2}`}>지속</Button>
-                    <Button variant={'outlined'} color="secondary" onClick={() => abilBtn('능력없음')} className={`${abil3}`}>능력없음</Button>
-                    <Button variant={'outlined'} color="secondary" onClick={() => abilBtn('버리기')} className={`${abil4}`}>버리기</Button>
-                    <Button variant={'outlined'} color="secondary" onClick={() => abilBtn('이동')} className={`${abil5}`}>이동</Button>
-                    <Button variant={'outlined'} color="secondary" onClick={() => abilBtn('파괴')} className={`${abil6}`}>파괴</Button>
+                <div className="text-left pl-2">
+                    <p><b>능력</b></p>
+                    <Button variant={'outlined'} color="secondary" onClick={() => abilBtn('출현')} className={abil1 ? 'bg-purple-600 text-white hover:bg-purple-800' : ''}>출현</Button>
+                    <Button variant={'outlined'} color="secondary" onClick={() => abilBtn('지속')} className={abil2 ? 'bg-purple-600 text-white hover:bg-purple-800' : ''}>지속</Button>
+                    <Button variant={'outlined'} color="secondary" onClick={() => abilBtn('능력없음')} className={abil3 ? 'bg-purple-600 text-white hover:bg-purple-800' : ''}>능력없음</Button>
+                    <Button variant={'outlined'} color="secondary" onClick={() => abilBtn('버리기')} className={abil4 ? 'bg-purple-600 text-white hover:bg-purple-800' : ''}>버리기</Button>
+                    <Button variant={'outlined'} color="secondary" onClick={() => abilBtn('이동')} className={abil5 ? 'bg-purple-600 text-white hover:bg-purple-800' : ''}>이동</Button>
+                    <Button variant={'outlined'} color="secondary" onClick={() => abilBtn('파괴')} className={abil6 ? 'bg-purple-600 text-white hover:bg-purple-800' : ''}>파괴</Button>
                 
                 </div>
                 <div className="text-right">
-                  <span>분류 : </span>
-                  <Button variant="outlined" onClick={costSortBtn}>{sort === 0 ? cost === 0 ? '비용 ↓' : '비용 ↑' : '비용'}</Button>
-                  <Button variant="outlined" onClick={powerSortBtn}>{sort === 1 ? power === 0 ? '파워 ↓' : '파워 ↑' : '파워'}</Button>
+                    <b>정렬 : </b>
+                    <Button variant="outlined" onClick={costSortBtn}>{sort === 0 ? cost === 0 ? '비용 ↓' : '비용 ↑' : '비용'}</Button>
+                    <Button variant="outlined" onClick={powerSortBtn}>{sort === 1 ? power === 0 ? '파워 ↓' : '파워 ↑' : '파워'}</Button>
                 </div>
             </div>
            

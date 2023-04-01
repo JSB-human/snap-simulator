@@ -158,6 +158,7 @@ export default function Home() {
                 height={150}
                 placeholder={"blur"}
                 blurDataURL={"/white.png"}
+                onContextMenu={handleContextMenu}
               ></Image>
             </Tooltip>
     )
@@ -254,7 +255,7 @@ export default function Home() {
             ref={drag} data-testid={'box'}
             placeholder={"blur"}
             blurDataURL={"/white.png"}
-            onContextMenu={() => {return false;}}
+            onContextMenu={handleContextMenu}
           />
         </Tooltip>
       </div>
@@ -420,10 +421,17 @@ export default function Home() {
 
     return(
       cardName === "" ? 
-      <div className={`border-neutral-400 border-2 w-[70px] h-[100px] m-auto align-middle ${bgColor}  font-bold text-3xl rounded-md`}
-        ref={drop}
-        data-testid='bin'
-      ></div>
+      <div>
+          <div className={`border-neutral-400 border-2 w-[70px] h-[100px] m-auto align-middle ${bgColor}  font-bold text-3xl rounded-md`}
+            ref={drop}
+            data-testid='bin'
+          ></div>
+          <div className="">
+          <Button onClick={() => powerMinus(zoneNo)} color="secondary">-</Button>
+          {power}
+          <Button onClick={() =>  powerPlus(zoneNo)} color="secondary">+</Button>
+        </div>
+      </div>
       :
       <div>
         <div className="flex items-center justify-center">
@@ -441,18 +449,23 @@ export default function Home() {
               className={`${bgColor}`}
               placeholder={"blur"}
               blurDataURL={"/white.png"}
+              onContextMenu={handleContextMenu}
             ></Image>
           </Tooltip>
         </div>
         <div className="">
-          <Button onClick={() => powerMinus(zoneNo)}>-</Button>
+          <Button onClick={() => powerMinus(zoneNo)} color="secondary">-</Button>
           {power}
-          <Button onClick={() =>  powerPlus(zoneNo)}>+</Button>
+          <Button onClick={() =>  powerPlus(zoneNo)} color="secondary">+</Button>
         </div>
       </div>
     
     )
   })
+
+  function handleContextMenu(e : React.MouseEvent<HTMLImageElement, MouseEvent>) {
+    e.preventDefault();
+  }
 
   const powerPlus = (zoneNo : {zoneNo : number, index: number}) => {
     let updateZones;
@@ -601,19 +614,40 @@ export default function Home() {
     setLocation3("");
 
   }
+  const [upPress, setUpPress] = useState<any>(null);
+  const [downPress, setDownPress] = useState<any>(null);
 
-  const scrollUp = () => {
-    let cur : any = innerRef.current;
-    if(cur){
-      cur.scrollTop -= 100;
-    }
+  const upBtnStart = () => {
+    
+    const id = setInterval(() => {
+      let cur : any = innerRef.current;
+      if(cur){
+        cur.scrollTop -= 100;
+      }
+    },100);
+    setUpPress(id);
+    
   }
 
-  const scrollDown = () => {
-    let cur : any = innerRef.current;
-    if(cur){
-      cur.scrollTop += 100;
-    }
+  const upBtnEnd = () => {
+    clearTimeout(upPress);
+  }
+  
+
+  const downBtnStart = () => {
+    
+    const id = setInterval(() => {
+      let cur : any = innerRef.current;
+      if(cur){
+        cur.scrollTop += 100;
+      }
+    },100);
+    setDownPress(id);
+    
+  }
+
+  const downBtnEnd = () => {
+    clearTimeout(downPress);
   }
  
 
@@ -714,11 +748,11 @@ export default function Home() {
         </div>
 
         <div className="border-2 m-4 p-2">
-          <Button className="w-full lg:hidden md:block" onClick={scrollUp}><ArrowCircleUpIcon></ArrowCircleUpIcon></Button>
+          <Button className="w-full lg:hidden md:block" onTouchStart={upBtnStart} onTouchEnd={upBtnEnd}><ArrowCircleUpIcon></ArrowCircleUpIcon></Button>
           <div ref={innerRef} className="grid grid-cols-3 lg:grid-cols-12 md:grid-cols-6 sm:grid-cols-4 overflow-y-auto h-[250px] ">
             {CardList}
           </div>
-          <Button className="w-full lg:hidden md:block" onClick={scrollDown}><ArrowCircleDownIcon ></ArrowCircleDownIcon></Button>
+          <Button className="w-full lg:hidden md:block" onTouchStart={downBtnStart} onTouchEnd={downBtnEnd}><ArrowCircleDownIcon ></ArrowCircleDownIcon></Button>
         </div>
         <p>카드를 드래그하면 스크롤이 올라갑니다.</p>
         <Footer></Footer>

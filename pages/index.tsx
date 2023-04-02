@@ -426,11 +426,11 @@ export default function Home() {
             ref={drop}
             data-testid='bin'
           ></div>
-          <div className="">
+          {/* <div className="">
           <Button onClick={() => powerMinus(zoneNo)} color="secondary">-</Button>
           {power}
           <Button onClick={() =>  powerPlus(zoneNo)} color="secondary">+</Button>
-        </div>
+        </div> */}
       </div>
       :
       <div>
